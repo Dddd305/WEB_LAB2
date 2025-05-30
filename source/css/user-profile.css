@@ -1,0 +1,24 @@
+body {
+  background: #e8fdf9 !important;
+}
+.btn-about {
+  color: #5f9ea0;
+  border: 2px solid #5f9ea0 !important;
+  background-color: transparent;
+}
+
+.btn-about:hover {
+  background-color: #5f9ea0;
+  color: white;
+}
+
+.btn-login {
+  color: #5f9ea0;
+  border: 2px solid #5f9ea0 !important;
+  background-color: transparent;
+}
+
+.btn-login:hover {
+  background-color: #5f9ea0;
+  color: white;
+}

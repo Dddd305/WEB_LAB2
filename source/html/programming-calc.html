@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProgrammingCalculator</title>
+    <link rel="stylesheet" crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH">
+    <link rel="stylesheet" crossorigin="anonymous" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ">
+    <link rel="icon" href="../icon/calculator.png">
+    <link rel="stylesheet" href="../css/user-profile.css">
+    <link rel="stylesheet" href="../css/calc.css">
+</head>
+
+<body>
+    <div class="pos-f-t">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid d-flex justify-content-between align-items-center">
+                <a href="../html/index.html" class="navbar-brand">
+                    <img src="../icon/calculator.png" width="60" height="60" alt="Logo">
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="navbar-nav nav-link me-right" aria-current="page" href="../html/ordinary-calc.html">Ordinary</a>
+                        </li>
+                    </ul>
+
+                    <div class="d-flex align-items-center gap-3">
+                        <a href="../html/log-in.html" class="btn btn-login">Log Out</a>
+                        <a href="../html/user-profile.html">
+                            <img src="../icon/user-photo.png" width="40" height="40" alt="User" class="rounded-circle">
+                        </a>
+                    </div>
+
+                </div>
+            </nav>
+
+            <div class="container-fluid">
+        <ul class="list-group border border-2 border-dark border-top-0 rounded-0">
+            <li class="list-group-item d-flex justify-content-between align-items-center px-3 py-3">
+                <span class="fw-bold">Expression:</span>
+                <span class="text-muted h5 mb-0" id="calculator-input">0</span>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center px-3 py-3">
+                <span class="fw-bold">Result:</span>
+                <span class="h2 mb-0" id="calculator-current">0</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container-fluid" style="height: 75vh;">
+        <div class="row gx-1 gy-1 mb-2 h-30"> <div class="col-4">
+                <div class="dropdown w-100 h-100">
+                    <button type="button" class="btn btn-dark w-100 h-100 shadow-none border border-2 border-light rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bitwise
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item text-uppercase" href="#" id="op-bitwise-and">And</a></li>
+                        <li><a class="dropdown-item text-uppercase" href="#" id="op-bitwise-or">Or</a></li>
+                        <li><a class="dropdown-item text-uppercase" href="#" id="op-bitwise-not">Not</a></li>
+                        <li><a class="dropdown-item text-uppercase" href="#" id="op-bitwise-nand">Nand</a></li>
+                        <li><a class="dropdown-item text-uppercase" href="#" id="op-bitwise-nor">Nor</a></li>
+                        <li><a class="dropdown-item text-uppercase" href="#" id="op-bitwise-xor">Xor</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="dropdown w-100 h-100">
+                    <button type="button" class="btn btn-dark w-100 h-100 shadow-none border border-2 border-light rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
+                        Bit Shift
+                    </button>
+                    <ul class="dropdown-menu p-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bitShift" value="arithmetic" id="shift-arithmetic" checked />
+                            <label class="form-check-label text-capitalize" for="shift-arithmetic">Arithmetic shift</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="bitShift" value="logical" id="shift-logical" />
+                            <label class="form-check-label text-capitalize" for="shift-logical">Logical shift</label>
+                        </div>
+                        </ul>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <div class="dropdown w-100 h-100">
+                    <button type="button" class="btn btn-dark w-100 h-100 shadow-none border border-2 border-light rounded-0" data-bs-toggle="dropdown" aria-expanded="false">
+                        Base
+                    </button>
+                    <ul class="dropdown-menu p-1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="baseSelect" value="2" id="base-2" />
+                            <label class="form-check-label text-capitalize" for="base-2">2</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="baseSelect" value="8" id="base-8" />
+                            <label class="form-check-label text-capitalize" for="base-8">8</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="baseSelect" value="10" id="base-10" checked />
+                            <label class="form-check-label text-capitalize" for="base-10">10</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="baseSelect" value="16" id="base-16" />
+                            <label class="form-check-label text-capitalize" for="base-16">16</label>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row gx-1 gy-1 h-100"> <div class="col-2 d-flex flex-column gap-1 h-100">
+                <button class="btn btn-dark w-100 flex-fill" id="btn-hex-A">A</button>
+                <button class="btn btn-dark w-100 flex-fill" id="btn-hex-B">B</button>
+                <button class="btn btn-dark w-100 flex-fill" id="btn-hex-C">C</button>
+                <button class="btn btn-dark w-100 flex-fill" id="btn-hex-D">D</button>
+                <button class="btn btn-dark w-100 flex-fill" id="btn-hex-E">E</button>
+                <button class="btn btn-dark w-100 flex-fill" id="btn-hex-F">F</button>
+            </div>
+
+            <div class="col-10 d-flex flex-column h-100">
+                <div class="d-grid gap-1 flex-fill" style="grid-template-columns: repeat(4, 1fr);">
+                    <button class="btn btn-dark w-100 h-100" id="btn-shift-left">&lt;&lt;</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-shift-right">&gt;&gt;</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-clear">C</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-backspace">⌫</button>
+
+                    <button class="btn btn-dark w-100 h-100" id="btn-lparen">(</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-rparen">)</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-modulus">%</button> 
+                    <button class="btn btn-dark w-100 h-100" id="btn-divide">÷</button>
+
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-7">7</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-8">8</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-9">9</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-multiply">×</button>
+
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-4">4</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-5">5</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-6">6</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-subtract">−</button> 
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-1">1</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-2">2</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-3">3</button>
+                    <button class="btn btn-dark w-100 h-100" id="btn-add">+</button>
+
+                    <button class="btn btn-secondary w-100 h-100" id="btn-sign">±</button> 
+                    <button class="btn btn-secondary w-100 h-100" id="btn-digit-0">0</button>
+                    <button class="btn btn-secondary w-100 h-100" id="btn-decimal">.</button> 
+                    <button class="btn btn-about w-100 h-100" id="btn-equals">=</button> 
+                </div>
+            </div>
+        </div>
+    </div>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+</body>
+<script type="module" src="../../js/programming-calc/main.js"></script>
+</html>

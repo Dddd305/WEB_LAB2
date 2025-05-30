@@ -1,0 +1,43 @@
+body {
+  background-color: #e8fdf9;
+}
+
+.title {
+  color: #5f9ea0;
+}
+
+.app-icon {
+  width: 42px;
+  height: 42px;
+}
+
+input, select {
+  border: 1px solid #5f9ea0 !important;
+  color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: #5f9ea0 !important;
+  box-shadow: 0 0 0 0.1rem #5f9ea0;
+}
+
+.button-auth {
+  background-color: #5f9ea0;
+  color: white;
+}
+
+.button-auth:hover,
+.button-auth:active,
+.button-auth:focus {
+  background-color: white !important;
+  color: #5f9ea0 !important;
+  border: 2px solid #5f9ea0 !important;
+}
+
+.button-text-white {
+  color: white;
+}

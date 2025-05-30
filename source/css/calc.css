@@ -1,0 +1,62 @@
+.border-invis-focus {
+    border: transparent !important;
+    background-color: transparent;
+    outline: none;
+    border-radius: 5px;
+}
+/* --- Базові стилі калькулятора --- */
+.calc-wrapper {
+  border: 2px solid #5f9ea0;
+  border-radius: 10px;
+  padding: 20px;
+  /* Не обмежуємо висоту тут */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* --- Адаптивність для мобільного --- */
+@media (max-width: 768px) {
+  /* Сам блок-картка */
+  .calc-wrapper {
+    border-radius: 0;
+    padding: 10px;
+  }
+
+  /* Забезпечуємо, що картка не ширша за екран */
+  .calc-wrapper,
+  .container-fluid.calc-area {
+    width: 100vw;
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  /* Контейнер із кнопками — висота за контентом */
+  .container-fluid.calc-area {
+    max-height: calc(100vh - 120px); /* віднімаємо приблизно висоту navbar+header */
+    overflow-y: auto;               /* дозволяємо скролити, якщо потрібно */
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Рядок із кнопками */
+  .row.row-cols-4.px-3.h-100 {
+    height: auto;
+    gap: 0.25rem; /* відступи між кнопками */
+  }
+
+  /* Зменшуємо розміри кнопок, щоб вони вміщалися */
+  .row.row-cols-4 .btn {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+  }
+}
+.btn-about {
+    color: #5f9ea0;
+    border: 2px solid #5f9ea0 !important;
+    background-color: transparent;
+  }
+  
+  .btn-about:hover {
+    background-color: #5f9ea0;
+    color: white;
+  }
