@@ -6,4 +6,4 @@
 
 Загальне завдання: розробити функціональність для статичних сторінок Web-додатку першої лабораторної роботи із використанням шаблону MVC.
 
-<a href="https://docs.google.com/document/d/17hMpuuTdRjR3jzfQBksDd80Y7AmGaehOE8aB_mTCwzs/edit?usp=sharing" rel="nofollow">Посилання на звіт</a>
+<a href="https://docs.google.com/document/d/1MISmNEUrRVxJfn8T7aBwHXESyN3jweXTfXaLhAEum3Q/edit?usp=sharing" rel="nofollow">Посилання на звіт</a>
